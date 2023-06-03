@@ -1,0 +1,20 @@
+freq(t):
+ (self.f_GW + self.f_1 * t)*(1 - self.K*np.cos(2 * pi * t)/self.P + self.phi_0)
+
+Int_freq(t):
+ (2*t*(2*self.f_GW + self.f_1*t) + (self.K*self.P*(self.f_1*self.P*np.cos(self.phi_0) - self.f_1*self.P*np.cos((2*np.pi*t)/self.P + self.phi_0) + 2*self.f_GW*np.pi*np.sin(self.phi_0) - 2*np.pi*(self.f_GW + self.f_1*t)*np.sin((2*np.pi*t)/self.P + self.phi_0)))/np.pi**2)/4.
+
+d Int / d f_0:
+ t - (self.K*self.P*np.cos((np.pi*t)/self.P + self.phi_0)*np.sin((np.pi*t)/self.P))/np.pi
+
+d Int / d f_1:
+ t**2/2. - (self.K*self.P*(-(self.P*np.cos(self.phi_0)) + self.P*np.cos((2*np.pi*t)/self.P + self.phi_0) + 2*np.pi*t*np.sin((2*np.pi*t)/self.P + self.phi_0)))/(4.*np.pi**2)
+
+d Int / d self.K:
+ (self.P*(self.f_1*self.P*np.cos(self.phi_0) - self.f_1*self.P*np.cos((2*np.pi*t)/self.P + self.phi_0) + 2*self.f_GW*np.pi*np.sin(self.phi_0) - 2*np.pi*(self.f_GW + self.f_1*t)*np.sin((2*np.pi*t)/self.P + self.phi_0)))/(4.*np.pi**2)
+
+d Int / d self.P:
+ (self.K*(self.f_1*self.P**2*np.cos(self.phi_0) + (-(self.f_1*self.P**2) + 2*self.f_GW*np.pi**2*t + 2*self.f_1*np.pi**2*t**2)*np.cos((2*np.pi*t)/self.P + self.phi_0) + self.P*np.pi*(self.f_GW*np.sin(self.phi_0) - (self.f_GW + 2*self.f_1*t)*np.sin((2*np.pi*t)/self.P + self.phi_0))))/(2.*self.P*np.pi**2)
+
+d Int / d phi_0:
+ (self.K*self.P*(2*self.f_GW*np.pi*np.cos(self.phi_0) - 2*np.pi*(self.f_GW + self.f_1*t)*np.cos((2*np.pi*t)/self.P + self.phi_0) + self.f_1*self.P*(-np.sin(self.phi_0) + np.sin((2*np.pi*t)/self.P + self.phi_0))))/(4.*np.pi**2)

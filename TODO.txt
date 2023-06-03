@@ -1,0 +1,5 @@
+Next steps of the project:
+o Check P-uncertainty again
+o Make one plot combining LISA, IG, combined measurement
+o X-Ray binary of the paper -> Could we see it in LISA?
+o 

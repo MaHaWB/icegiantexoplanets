@@ -1,0 +1,167 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Aug  2 15:25:43 2021
+
+@author: marcus
+"""
+
+from scipy.constants import *
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+from scipy import integrate, optimize
+
+pi = np.pi
+AU = 1.5e11 # m
+pc = 3.0857e16 # 2e5 AU
+yr = 24*3600*365.25 # s
+
+M_J = 1.898e27 # kg
+M_S = 1.989e30 # kg
+r_S = 2*G*M_S/c**2 # m
+
+sqth = np.sqrt(3)/2
+omega_E = 2*pi/yr
+
+def chirp_mass(m1,m2):
+    '''
+    Parameters
+    ----------
+    m1,2 : Mass of the parts of the binary in M_S.
+
+    Returns
+    -------
+    M_c : The chirp mass of the binary system in M_S
+
+    '''
+    return (m1*m2)**(3/5)/((m1+m2))**(1/5)
+
+def r_s(m):
+    '''
+    Parameters
+    ----------
+    m : Mass of an object in M_S
+
+    Returns
+    -------
+    r_s : The length of the Schwarzschild radius in m.
+    '''
+    return m*r_S
+
+def f_binary(m1,m2,sep):
+    '''
+    Parameters
+    ----------
+    m1,2 : Mass of the binary in M_S
+    sep : The seperation of the binary in m
+
+    Returns
+    -------
+    f_binary : The orbital frequency of the binary from newtonian physics in Hz
+    '''
+    return np.sqrt(G*M_S*(m1+m2)/sep**3)/2/pi
+
+def amplitude(dist,m1,m2,sep,cos_inc):
+    '''
+    Parameters
+    ----------
+    dist : Distance from us to source in pc
+    m1,2 : Mass of the binaries in M_S
+    sep : Distance of the binaries in m
+    inc : The inclination of the plane of motion to us (+/- 1 = face on, 0 = edge on)
+
+    Returns
+    -------
+    [A_plus, A_cross] : The amplitude of the gravitational wave detected here on earth
+
+    '''
+    return 4/dist/pc*r_s(chirp_mass(m1,m2))**(5/3)*(pi*2*f_binary(m1,m2,sep)/c)**(2/3)*np.array([(1.+cos_inc**2)/2, -cos_inc])
+
+def F_LISA_det_frame(cos_theta_S,phi_S,psi_S):
+    '''
+    Parameters
+    ----------
+    theta_S : Inclination angle of the source in the detector frame
+    phi_S : Azimuth angle of the source in the detector frame
+    psi_S : Polarization angle of the wavefront
+
+    Returns
+    -------
+    [F_plus, F_cross] : The orbital frequency of the binary from newtonian physics in Hz
+    '''
+    Term_A = .5*(1.+cos_theta_S**2)*np.cos(2*phi_S)
+    Term_B = cos_theta_S*np.sin(2*phi_S)
+    return np.array([Term_A*np.cos(2*psi_S) - Term_B*np.sin(2*psi_S),
+                     Term_A*np.sin(2*psi_S) + Term_B*np.cos(2*psi_S)])
+
+def cos_theta_S_detector(theta_S_Ec, phi_S_Ec, t=0):
+    '''
+    Parameters
+    ----------
+    theta_S_Ec : Inclination angle of the source in ecliptic coordinates
+    phi_S_Ec : Azimuth angle of the source in the ecliptic coordinates
+    t : Time in s since LISA started detection
+
+    Returns
+    -------
+    cos_theta_S : The cos(theta_S) in the detector frame = <n,z>
+    '''
+    return .5*np.cos(theta_S_Ec)-sqth*np.sin(theta_S_Ec)*np.cos(omega_E*t-phi_S_Ec)
+
+def phi_S_det(theta_S_Ec,phi_S_Ec,t=0):
+    '''
+    Parameters
+    ----------
+    theta_S_Ec : Inclination angle of the source in ecliptic coordinates
+    phi_S_Ec : Azimuth angle of the source in the ecliptic coordinates
+    t : Time in s since LISA started detection
+
+    Returns
+    -------
+    phi_S_det : The azimuth angle phi_S of the source in the detector frame
+    '''
+    arctan_term = np.arctan2((np.sqrt(3)*np.cos(theta_S_Ec)+np.sin(theta_S_Ec)*np.cos(omega_E*t-phi_S_Ec)),(2*np.sin(theta_S_Ec)*np.sin(omega_E*t-phi_S_Ec)))
+    return (omega_E*t - arctan_term) % (2*pi)
+
+def psi_S(theta_L,phi_L,phi_S_Ec,theta_S_Ec,cos_theta_S,t=0):
+    '''
+    Parameters
+    ----------
+    theta_L : The inclination angle of the normal to the binaries orbital plane in ecliptic coords
+    phi_L : The azimuth angle of the normal to the binaries orbital plane in ecliptic coords
+    theta_S_Ec : Inclination angle of the source in ecliptic coordinates
+    phi_S_Ec : Azimuth angle of the source in the ecliptic coordinates
+    cos_theta_S : The cos(theta_S) in the detector frame = <n,z>
+    t : Time in s since LISA started detection
+
+    Returns
+    -------
+    psi_S : The polarization angle psi_S of the wavefront in the detector frame
+    '''
+    Lz = .5*np.cos(theta_L)-sqth*np.sin(theta_L)*np.cos(omega_E*t-phi_L)
+    Ln = cos_inclination(theta_L,phi_L,theta_S_Ec,phi_S_Ec)
+    nLxz = .5*np.sin(theta_L)*np.sin(theta_S_Ec)*np.sin(phi_L-phi_S_Ec) - sqth*np.cos(omega_E*t)*(np.cos(theta_L)*np.sin(theta_S_Ec)*np.sin(phi_S_Ec)-np.cos(theta_S_Ec)*np.sin(theta_L)*np.sin(phi_L)) - sqth*np.sin(omega_E*t)*(np.cos(theta_S_Ec)*np.sin(theta_L)*np.cos(phi_L) - np.cos(theta_L)*np.sin(theta_S_Ec)*np.cos(phi_S_Ec))
+    arc = np.arctan2((Lz - Ln*cos_theta_S),nLxz)
+    return arc
+
+def cos_inclination(theta_L,phi_L,theta_S_Ec,phi_S_Ec):
+    return np.cos(theta_L)*np.cos(theta_S_Ec)+np.sin(theta_L)*np.sin(theta_S_Ec)*np.cos(phi_L-phi_S_Ec)
+
+def A(amplitude,F_LISA):
+    return np.linalg.norm(amplitude*F_LISA)
+
+def yr_plot(func):
+    ts = np.linspace(0,2*365*24*60*60,1000)
+    funcs = [func(t) for t in ts]
+    plt.plot(ts,funcs)
+
+ts = np.linspace(0,yr,1000)
+theta_L = np.arccos(-.2)
+theta_S_Ec = np.arccos(.3)
+phi_L = 4.
+phi_S_Ec = 5.
+As = [A(amplitude(1,.5,.5,AU,cos_inclination(theta_L,phi_L,theta_S_Ec,phi_S_Ec)), F_LISA_det_frame(cos_theta_S_detector(theta_S_Ec,phi_S_Ec,t),phi_S_det(theta_S_Ec,phi_S_Ec,t), psi_S(theta_L,phi_L,phi_S_Ec,theta_S_Ec,cos_theta_S_detector(theta_S_Ec,phi_S_Ec,t),t))) for t in ts]
+AsII = [A(amplitude(1,.5,.5,AU,cos_inclination(theta_L,phi_L,theta_S_Ec,phi_S_Ec)), F_LISA_det_frame(cos_theta_S_detector(theta_S_Ec,phi_S_Ec,t),phi_S_det(theta_S_Ec,phi_S_Ec,t) -pi/4, psi_S(theta_L,phi_L,phi_S_Ec,theta_S_Ec,cos_theta_S_detector(theta_S_Ec,phi_S_Ec,t),t))) for t in ts]
+plt.plot(ts,As,label='AI')
+plt.plot(ts,AsII,label='AII')
+plt.legend()

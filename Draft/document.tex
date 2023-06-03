@@ -1,0 +1,285 @@
+% ****** Start of file apssamp.tex ******
+%
+%   This file is part of the APS files in the REVTeX 4.2 distribution.
+%   Version 4.2a of REVTeX, December 2014
+%
+%   Copyright (c) 2014 The American Physical Society.
+%
+%   See the REVTeX 4 README file for restrictions and more information.
+%
+% TeX'ing this file requires that you have AMS-LaTeX 2.0 installed
+% as well as the rest of the prerequisites for REVTeX 4.2
+%
+% See the REVTeX 4 README file
+% It also requires running BibTeX. The commands are as follows:
+%
+%  1)  latex apssamp.tex
+%  2)  bibtex apssamp
+%  3)  latex apssamp.tex
+%  4)  latex apssamp.tex
+%
+\documentclass[%
+ reprint,
+%superscriptaddress,
+%groupedaddress,
+%unsortedaddress,
+%runinaddress,
+%frontmatterverbose, 
+%preprint,
+ preprintnumbers,
+ nofootinbib,
+%nobibnotes,
+%bibnotes,
+ amsmath,amssymb,
+ aps,
+%pra,
+%prb,
+%rmp,
+%prstab,
+%prstper,
+%floatfix,
+]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{hyperref}% add hypertext capabilities
+%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
+%\linenumbers\relax % Commence numbering lines
+
+%\usepackage[showframe,%Uncomment any one of the following lines to test 
+%%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
+%%text={7in,10in},centering,
+%%margin=1.5in,
+%%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
+%%height=10in,a5paper,hmargin={3cm,0.8in},
+%]{geometry}
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand*\DWD{\text{DWD}}
+\newcommand*\GW{\text{GW}}
+
+\begin{document}
+
+\preprint{APS/123-QED}
+
+\title{Student Project Report:\\Searching for Jupiter-like exoplanets via gravitational waves}
+
+\author{Marcus Haberland}
+ \email{marcush@student.ethz.ch}
+\affiliation{ETH Zurich}
+
+\date{\today}
+
+\begin{abstract}
+LISA, doppler tracking, jupiter like
+\end{abstract}
+
+%\keywords{Suggested keywords}%Use showkeys class option if keyword
+                              %display desired
+\maketitle
+
+%\tableofcontents
+
+\section{\label{sec:level1}Introduction}
+
+Exoplanets remain of grave scientific interest for the astrophysical comunity. In the last twenty years, more than xxx exoplanets have been detected, mainly through radial velocity measurements, micro-lensing and direct imaging.
+
+On a similar note, multimessenger astronomie has emerged as the new state of the art, as a combination of different measurement techniques leads to smaller uncertainties and in general less systematic errors. In this sense, the start of the Laser-Interometer Space Antannae (LISA) is highly anticipated by the astrophysics community, as it will be sensitive to gravitational waves in the untested millihertz regime.
+
+In this project, we looked at the detection of exoplanets around double white dwarf systems (DWD) via a novel radial velocity technique in monochromatic gravitational waves (GW) \cite{Tamanini}. We repeat the method of Tamanini and Danielski and expand on it via a proposed doppler tracking method for a 10 year NASA mission to the ice giants Jupiter and Neptune.
+
+\subsection{Detecting Exoplanets via Gravitational Waves}
+
+There are approximately 20k DWDs expected to be heard and resolved by LISA \cite{...}. Most of these will be placed somewhere in the Milky Way and emit mainly monochromatic radiation due to a circular orbit with orbital period $T\lessapprox 1$ h will mainly radiate according to the quadrupole moment with twice the orbital frequency
+\begin{equation*}
+	f_\GW=2f_\DWD=\frac{2}{T}
+\end{equation*}
+where the orbital frequency for DWDs with orbital period as above still given by the newtonian approximation
+\begin{equation*}
+	\omega_\DWD^2=\frac{G(m_1+m_2)}{r^3}
+\end{equation*}
+We note that for higher eccentricities we would instead expect an overtone spectrum, $\omega_n=n\omega_{DWD}$. As eccentricities tend to decay due to angular momentum lost via GW emission, we constrain our analysis on nearly circular orbits with eccentricities $e\ll 0.2$.
+
+Now the detection of heavy exoplanets with large orbital periods $P\gg T$ is very similar to the general radial verlocity technique: Due to the motion of the exoplanet around the DWD system, the GW frequency gets modulated by the typical doppler shift With
+\begin{equation*}
+	f_{obs}(t)=\left( 1+\frac{v_\parallel(t)}{c}\right)f_\GW(t)
+\end{equation*}
+Where we can use the Kepplerian calculation to find for roughly circular orbits of the planet as well
+\begin{equation*}
+	v_\parallel (t)=-K\cos{}\frac{2\pi}{P}t} \text{ with } K=\left(\frac{2\pi G}{P}\right)^{1/3} \frac{M_P}{(M_b+M_P)} \sin{i}
+\end{equation*}
+
+\subsection{The IceCube Detector}
+
+The IceCube detector is a high-energy neutrino observatory localized between 1.5 and 2.5 km depth in glacial ice at the South Pole which instruments a cubic kilometre volume of ice with optical sensors \cite{Abbasi_2009}. It detects neutrinos of all flavors by observing the Cherenkov radiation induced by the charged end products of deep-inelastic neutrino-nucleon scattering in the ice. Therefore IceCube can detect neutrinos in a larger volume than just the detector itself, if the end-products can reach it from the outside. When a neutrino $\nu_l$ interacts with a nucleon $N$ of an ice molecule, it can do so via charged- (CC, Eq. \ref{subeq:cc}) or neutral-current (NC, Eq. \ref{subeq:nc}) interactions, with $X$ a hadronic product of the reaction \cite{Becker_2008}
+
+\begin{eqnarray}
+\nu_l + N \rightarrow X + l
+\label{subeq:cc}
+\\
+\nu_l + N \rightarrow X + \nu_l \ .
+\label{subeq:nc}
+\end{eqnarray}
+
+If the end-product is charged and moving faster than the speed of light in the medium, i.e. glacial ice, it emits Cherenkov photons. Those are detected by photomultiplier tubes that are in the case of IceCube implemented in 5160 Digital Optical Modules (DOMs), which are attached to 86 cables in the ice. The detector is running in this final configuration since 2011. The DOMs are spaced 17 m apart vertically and the cables are spaced horizontally in a hexagonal grid 125 m apart, except for 8 strings placed nearer to each other in the middle part of the detector which form the DeepCore subarray. IceCube as a whole is sensitive to neutrinos with energies  $E_\nu \gtrsim 10$ GeV \cite{Abbasi_2009,greater1TeV}.
+
+For each event both the incident direction of the neutrino as well as its energy and most probable flavor can be reconstructed. For this one uses that muons created during $\nu_\mu$ CC-interactions leave a track of Cherenkov photons and can traverse hundreds of kilometers of ice. Electrons and tauons produced in $\nu_e$ and $\nu_\tau$ CC-interactions in contrast result in a spatially short electromagnetic cascade. Electrons will rapidly lose energy through interactions in the medium while tauons will decay promptly. This results in additional measurable radiation losses. The hadronic cascade created in every deep-inelastic neutrino-nucleon scattering similarly emits Cherenkov photons over a short distance. Those cascades result in a signal nearly spherical in shape due to the large separation of the strings.
+
+After the first classification different energy information is generated per event. First the amount of collected photons serves as an energy proxy which includes radiation losses of the hadronic products for starting events inside the detector as well as the Cherenkov track of muons for CC $\nu_\mu$ interactions. In the case of muon production one can then determine the most-probable muon energy inside the detector by comparing the signal to templates of simulated muon interactions in IceCube. In most cases the muon will leave the detector which results in an uncertainty for the muon energy. From these information one can determine the most probable calibrated $\nu_\mu$ energy (this process is called 'unfolding'), which requires an assumption on the neutrino flux and detailed simulations of muon energy losses and detector responses. This reconstructed neutrino energy will be on average higher than the muon energy by a factor of roughly 2. For through-going events though one has to assume an interaction point, as muons created in high-energy interactions can traverse hundreds of kilometres of ice losing energy in the process and will then result in a low-energy event in the detector wrongly accounted for. Therefore if one considers through-going events, the unfolding method may be biased to lower energies \cite{Becker_2008,greater1TeV,2yearAstro}. 
+
+
+One large background for neutrino observation are atmospheric muons produced in cosmic ray air-showers, see Eq. \ref{eq:decaychannels}, that can penetrate the 1.5 km overburden of ice and reach the detector at sufficiently high energies from the southern hemisphere. They outnumber neutrino interactions by a factor $\sim 10^6$. Two reliable methods of background rejection are 1) to only use neutrino events incident from the northern hemisphere, where the bulk of Earth completely absorbs penetrating muons or 2) to implement a veto system, in which only events starting inside the detector volume are attributed as neutrino events \cite{greater1TeV,2yearAstro}.
+
+\section{\label{sec:level3}Analysis Method}
+\subsection{Flux determination}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.45\textwidth]{Data_releases.jpg}
+	\caption{\label{fig:DataSamples} The calculated fluxes in the northern hemisphere for the three considered $\nu_\mu$ data samples (points) are shown with error bars together with the expected conventional atmospheric flux contribution (red, solid) \cite{Honda_2007,2yearAstro}.}
+\end{figure}
+
+In our project we first compared different data releases from the IceCube Collaboration \cite{website} together with the internal platinum cut event data for the Matter-Enhanced Oscillations With Steriles (MEOWS) search from IceCube. We were looking for $\nu_\mu$ event data with the best background filtering method and as much information per event as possible in order for us to compute a prompt atmospheric flux contribution. We then settled on relevant data from two data releases.
+
+For the computation of fluxes we used Monte Carlo generated effective detector areas $A_{\text{eff}}$ per flavor, which came with each release. As this area is dependant on neutrino energy and neutrino zenith angle, they were calculated for bins of different energy proxies with bin edges $\{E_i\}$, and cosines of the zenith angles $\{\cos\theta_j\}$ to get constant solid angles per bin. By using the event data and the bins, we histogrammed the events accordingly, to generate a number of event per bin\footnote{For readability we will from now on omit the bin edges as arguments if a function is specified to be given \emph{per bin.}} $N_\nu(E_i,E_{i+1},\cos\theta_j,\cos\theta_{j+1})$. By dividing it by the effective detector area per bin as well as the lifetime $t$ of each detector configuration, we could compute a flux per bin $F_\nu$ in units m$^{-2}$ s$^{-1}$.
+
+To account for different bin configurations one usually instead looks at a continuous flux density distribution $\Phi_\nu(E,\cos\theta)$ in units GeV$^{-1}$ sr$^{-1}$ m$^{-2}$ s$^{-1}$, which relates to the flux as
+
+\begin{equation}
+F_\nu(E,E+\diff E,\cos\theta,\cos\theta+\diff\cos\theta)=\Phi_\nu(E,\cos\theta)\diff E \diff\Omega
+\end{equation}
+
+with $\diff E,\ \diff\Omega$ the measures in energy and solid angle. Accordingly if integrated per bin we find
+
+\begin{equation} \label{eq:flux_1}
+F_\nu=\iint_{bin}\Phi_\nu(E,\cos\theta)\diff E \diff \Omega \ .
+\end{equation}
+
+This can be solved more rigorously with a log-likelihood approach and theoretical predictions of the underlying fluxes, which we do not pursue. Instead we can simplify the integration to a multiplication by assuming an odd flux density function per bin. Then we find $\iint \diff E \diff\Omega \rightarrow \Delta E \Delta \Omega = 2\pi \Delta E \Delta \cos\theta$. This ultimately yields our flux computation model per bin
+
+\begin{equation} \label{eq:flux_2}
+\Phi_\nu = \frac{N_\nu}{2\pi \cdot A_{\text{eff}} \cdot t \cdot \Delta E \Delta\cos\theta} \ .
+\end{equation}
+
+To combine results from the same data release but different detector configurations and resulting different effective areas, we used a lifetime weighted mean 
+\begin{equation}
+	\Phi_{\nu,\text{tot}} = \frac{\sum_i t_i \cdot \Phi_{\nu,i}}{\sum_i t_i}
+\end{equation}
+for the resulting flux of each detector configuration.
+
+\subsection{Data Samples}
+
+\paragraph{All-Sky point-source 2010 to 2012} The first data release we considered corresponds to \cite{AllSky}. It contains 3 years of IceCube track-like neutrino candidate events detected between June 2010 and May 2013 with a veto implemented to reject atmospheric muons but regard through-going tracks in the northern hemisphere. In the first year not all 86 strings were already implemented, but only 79. Per event energy proxy and reconstructed zenith angle data was released, but not calibrated neutrino energy. This yields an overburden in the calculated flux possibly due to the bias when considering through-going tracks as stated earlier, which can be seen in Fig. \ref{fig:DataSamples}. In total the data set contained approximately 334k events.
+
+\paragraph{Two year astrophysical flux 2010/11} The release we used mainly in our analysis corresponds to \cite{2yearAstro}. Only neutrinos from the northern hemisphere are looked at in this study, which do not have to be starting events. Reconstructed muon energy proxy and zenith angle are stated for each event. As the effective area is generated in three bin categories - true neutrino energy, cosine of the zenith angle and energy proxy - we had to resort to different strategies as we had no access to a computation of the true neutrino energy. In total the data set contained approximately 35k events.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.45\textwidth]{two_year_flux.jpg}
+	\caption{\label{fig:two-year} The calculated fluxes in the northern hemisphere for the integration ansatz (int) as well as the ansatz using the energy proxy as true neutrino energy (equal) and two times the energy proxy as true neutrino energy (2x) for the two year astrophysical sample are shown with error bars together with the expected conventional atmospheric flux contribution \cite{Honda_2007,2yearAstro}. Note that the data is shown in dependence of energy proxy, while the model in dependence of true neutrino energy.}
+\end{figure}
+
+First we used an integration technique (denoted as int in Fig. \ref{fig:two-year} and \ref{fig:result}) in order to take a mean of the effective area in the observable event information
+
+\begin{equation}
+    A_{\text{eff}}(E_{\text{proxy}},\cos\theta) = \frac{1}{\Delta E_{\nu}} \int \diff E_{\nu} A_{\text{eff}}(E_{\nu},\cos\theta,E_{\text{proxy}}).
+\end{equation}
+
+
+
+Another approach was to input $E_{\text{proxy}}$ as the true neutrino energy $E_\nu$ (denoted as equal in Fig. \ref{fig:two-year} and \ref{fig:result}) as an approximation because we had no map from energy proxy to true neutrino energy. It could have been generated using Monte Carlo simulation, but this was outside the scope of this project. In accord with previous simulations performed by IceCube we also considered a different approximation $E_\nu \approx 2\times E_{\text{proxy}}$ to calculate a flux (denoted as 2x in Fig. \ref{fig:two-year}, \ref{fig:Fit_2x} and \ref{fig:result}). This is more reasonable as it accounts for the inelastic CC interaction where energy is lost and not purely transferred to the muon as an average linear map. All these approaches are compared over the northern hemisphere in Fig. \ref{fig:two-year}.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=.45\textwidth]{Fit_2yr_astrophysical_(2010-11)_2x.jpg}
+	\caption{\label{fig:Fit_2x} The result of the conventional atmospheric fit in the northern hemisphere for the 2x ansatz in the two year astrophysical sample is shown as an example. In the upper figure one can see the extrapolated fit (blue, solid) performed in the region marked by vertical lines as well as data (orange, points). The error of the fit is to small to be seen. In the lower figure one sees the result, where we subtracted the extrapolated fit from data (red, points) together with the expected astrophysical (dotted) and prompt atmospheric contributions (dash-dotted). Note that negative flux data points are not visible, but their error bars can exceed zero flux.}
+\end{figure}
+
+\begin{figure*}[!t]
+	\includegraphics[width=\textwidth]{Confidence_Result_together.jpg}
+	\caption{\label{fig:result}The 1-$\sigma$ confidence intervals of the least-squares fit of the different data sets as well as the literature flux (red dot) are shown. The 1-$\sigma$ confidence intervals for literature fluxes remain too small to be seen. In the left figure we show the fitting parameters of the least-squares fit for the conventional atmospheric flux in the northern hemisphere. The All-Sky point-source data can not be seen, as the normalization was roughly four orders of magnitude higher than the other ones. In the right figure we show the 1-$\sigma$ confidence interval of all data sets as well as the literature value for the prompt component in the northern hemisphere after subtraction of the best-fit conventional atmospheric and literature astrophysical $\nu_\mu$ flux components. Note that all fluxes have an unphysical best fit negative normalization.}
+\end{figure*}
+
+\subsection{Atmospheric contribution fitting}
+
+As the All-Sky point source data showed an error possibly due to unfolding, we concentrated on the two year astrophysical flux data. By looking at the whole northern hemisphere we gather maximum statistics for our analysis.
+
+We then assumed a simple power-law model $\Phi_\nu^{\text{Atm}}(E,\cos\theta;\phi_0,\gamma) = \phi_0 \cdot \left( \frac{E}{10\text{ GeV}} \right)^{-\gamma}$ for the conventional atmospheric flux component, to perform a binned least squares fit to data. We did this in an energy range $[E_{\text{start}},E_{\text{end}}]$  where IceCube is sensible to neutrinos yet the astrophysical and prompt atmospheric contributions are still suppressed, see again Fig. \ref{fig:Theory} for $\nu_\mu$. As the conventional atmospheric flux gets softer in the higher energy regime and we want to see an excess of flux we settled for a fit in the range $[2\times 10^3\text{ GeV},1\times 10^4\text{ GeV}]$. This range was also chosen to avoid detector threshold effects at the lower bound. The flux per bin to which we fit our data is calculated from our power-law model correspondingly to how we calculated fluxes from data (see again Eq. \ref{eq:flux_1} and \ref{eq:flux_2})
+\begin{equation}
+\Phi_{\nu,\text{bin}}^{\text{Atm}}(\phi_0,\gamma) = \frac{\iint_\text{bin} \Phi_\nu^{\text{Atm}}(E,\cos \theta) \diff E \diff\Omega}{\Delta E \Delta \Omega}
+\end{equation}
+to avoid systematic errors. This yields
+\begin{equation}
+    \Phi_{\nu,\text{bin}}^{\text{Atm}}(\phi_0,\gamma) = \phi_0 \cdot \frac{\left( 10\text{ GeV} \right)^{-\gamma}}{\gamma - 1} \cdot \frac{E_{i+1}^{-\gamma+1}-E_{i}^{-\gamma+1}}{E_{i+1}-E_{i}}
+\end{equation}
+per bin in units GeV$^{-1}$ sr$^{-1}$ m$^{-2}$ s$^{-1}$.
+
+By subtracting this power-law conventional atmospheric contribution we expect to visualize the prompt atmospheric and astrophysical flux contributions, see Fig. \ref{fig:Fit_2x}.
+
+In a last step, we subtracted the model for the astrophysical flux contribution reported by IceCube in earlier studies \cite{HESE2017}
+\begin{equation}
+	 \Phi_\nu^\text{Astr}(E) = \frac{2.5 \pm 0.8}{3}\times 10^{-14} \cdot \left( \frac{E}{100\text{ TeV}} \right)^{-(2.9 \pm 0.3)}
+\end{equation}
+in GeV$^{-1}$ sr$^{-1}$ m$^{-2}$ s$^{-1}$.
+
+ We performed a final fit to this difference to a power-law $\Phi^\text{prompt}_\nu(E,\cos\theta;\phi_0,\gamma) = \phi_0 \cdot \left(\frac{E}{100 \text{ TeV}}\right)^{-\gamma}$ in the energy range starting with the end bin of the conventional atmospheric fit $E_\text{end} = 1\times 10^4\text{ GeV}$ and ending with the last energy bin containing events. The results of all fits can be seen in Fig. \ref{fig:result}.
+
+\subsection{Uncertainties}
+
+For the error estimation we used a standard error of $1\pm 1$ events per event. We propagated this error in the histogram, where each bin then contained $N_\nu \pm \sqrt{N_\nu}$ events. In the case of the two year astrophysical data sample we also had an error per bin in effective area due to finite simulation statistics, which we propagated as well. We then included this propagated error in the computation of the least-squares fit and used the returned covariance matrix to determine the uncertainty for it. All together this yielded the error of the resulting prompt atmospheric and astrophysical flux components as can be seen in Fig. \ref{fig:Fit_2x}.
+
+To include uncertainties of the literature values in log space, we used first order error propagation to find for an observable $\Phi\pm\sigma_\Phi$ with a symmetric error in real space the corresponding symmetric error in log space
+
+\begin{equation}
+    \Phi^{+\Phi\cdot(\exp{(\sigma_\Phi / \Phi)}-1)}_{-\Phi\cdot(1-\exp{(\sigma_\Phi / \Phi)})} \ .
+\end{equation}
+
+This was important for the power law fluxes especially in the figures, as the lower bound in real space resulted in a negative flux that is unphysical.
+
+Confidence intervals were plotted using the covariance matrix returned by the least-squares methods. We computed the Pearson confidence coefficient $p = \frac{\text{cov}(\phi_0,\gamma)}{\sigma_{\phi_0}\sigma_\gamma}$ to determine eigenvalues of this covariance matrix and ultimately the radii of the 1-$\sigma$ ellipse according to \cite{cov}.
+
+We encountered several systematic uncertainties in this project mainly due to a lack of accessible results from IceCube like reconstructed neutrino energy as well as in-depth information to the computation of effective areas. Further, we did not include uncertainties for reconstructed angle and energy and did not use a Poisson distribution for error calculation of events per bin but instead $1\pm 1$ events which leads to zero error for bins containing no events contrary to expectation. These errors were inevitable in the scope of this project, otherwise we would have had access to these information or could have computed them ourselves. This especially complicated the handling of the two year astrophysical flux data which seemed to be the most promising.
+
+Theoretical uncertainties are accompanying as well, especially for the prompt atmospheric and astrophyiscal flux contributions as they can be created at energies at which we can only extrapolate QCD parameters. A different cut for the energy interval in which the fit was performed could have been made. We could have also used a broken power-law for our analysis or a more suitable model for the conventional flux like HKKMS which considers the energy spectrum of the cosmic ray primaries.
+
+\section{\label{sec:level4}Result}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.45\textwidth]{Prompt_Fit_All-Sky_point-source_(2010-2012)_2.jpg}
+\caption{\label{fig:Prompt} The result of the best-fit prompt result for the All-Sky point-source data after subtraction of the best-fit conventional atmospheric and astrophysical contribution reported by IceCube \cite{HESE2017} is shown (green, points) together with a best-fit power law prompt contribution from data (orange, solid) and theoretical predictions (blue, dash-dotted). The vertical line marks the start for the fit, the end is for the last bin containing neutrino events.}
+\end{figure}
+
+In this project we looked at IceCube Neutrino events with a combined detector lifetime of 5 years from two data releases and separate studies. One release contained neutrino events measured between 2010 and 2011 and the other one, which utilized different cuts, between 2010 and 2012.
+
+As we had no access to true neutrino energy reconstructions which was needed for a thorough analysis in the two year astrophysical flux data release from IceCube, we had to compare different methods for calculating effective detector areas.
+
+We first fitted a power-law model flux to data, to account for the conventional atmospheric flux contribution. We subtracted this conventional atmospheric contribution and a literature astrophysical flux contribution to look for a prompt component. The results of these fits in comparison to literature can be seen in Fig. \ref{fig:result}. The literature conventional atmospheric $\Phi_{\nu_\mu}^\text{Atm}$ flux did not lie inside of the confidence interval of any of the performed least-squares fits to data. The expected prompt contribution showed a negative normalization in every case. We suspect this to be because in the high energy regime we had no events in some bins and therefore a net negative flux after subtracting our power-law conventional fit as well as the literature astrophysical component. As these data points had negative values with little error, it influenced the last-squares fit to favour these bins. 
+
+The All-Sky point-source data release showed to have a similar normalization and spectral slope than the literature ERS prompt \cite{pertcharm} with a best-fit result
+\begin{equation}
+    \Phi^\text{prompt}_\nu = \left( -0.2 \pm 0.8 \right)\times 10^{-14} \left( \frac{E}{100\text{ TeV}}\right)^{-(2 \pm 1)}
+\end{equation}
+in units GeV$^{-1}$sr$^{-1}$m$^{-2}$s$^{-1}$. The fit for this result can be seen in Fig. \ref{fig:Prompt}. In comparison, the theoretical ERS prompt is expected to behave like
+\begin{equation}
+    \Phi^\text{ERS}_\nu = \left( 0.07 \pm 0.01 \right)\times 10^{-14} \left( \frac{E}{100\text{ TeV}}\right)^{-(2.88 \pm 0.03)}
+\end{equation}
+in units GeV$^{-1}$sr$^{-1}$m$^{-2}$s$^{-1}$.
+
+We report on no measurable prompt atmospheric flux component in our analysis, which is also due to insufficient reconstructed information per neutrino event.
+
+Still, a prompt atmospheric flux should exist and on average lead to roughly 0.81 through-going prompt muon neutrino events between 1 TeV and 100 PeV from the northern hemisphere in IceCube per day. We calculated this value using the effective area from the All-Sky point source 2012 release. The measurement of this flux will therefore remain a goal for IceCube which as well shows the importance of long-time neutrino detector experiments with high statistics.
+
+\begin{acknowledgments}
+We wish to thank the Uppsala University and Stockholm University local IceCube groups and in particular the supervisors of this project Carlos  P\'erez  de  los  Heros  and  Erin  O’Sullivan; as well as Olga Botner, Chad Finley, Allan Hallgren and Klas Hultqvist in particular for their input to the project.
+\end{acknowledgments}
+
+\appendix
+
+
+
+\nocite{*}
+
+\bibliography{document}
+
+\end{document}

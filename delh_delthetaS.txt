@@ -1,0 +1,657 @@
+        (np.sqrt(3)*np.cos(2*pi*self.freq_int(t) + ArcTan((self.a0*(1 + (np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))**2)*
+        ((np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (1 + (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)**2))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))))/2.,
+        self.a0*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))*
+        ((np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (1 + (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)**2)*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))))/2. + 
+        np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec)))))) + 
+        (2*AU*self.freq(t)*pi*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/c)*(2*self.a0**2*(-(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_L))*
+        (np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))*
+        ((np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (1 + (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)**2)*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))))/2. + 
+        np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec)))))**2 + 
+        (self.a0**2*(1 + (np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))**2)**2*
+        (np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (-0.5*(np.sqrt(3)*np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - t*omega_E)) - np.sin(self.theta_S_Ec)/2.)*(np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.) - 
+        np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (1 + (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)**2)*
+        (((-((np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(-(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_L))) - 
+        (-0.5*(np.sqrt(3)*np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - t*omega_E)) - np.sin(self.theta_S_Ec)/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))*
+        (-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.))/
+        ((np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))**2 + 
+        (-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.)**2) + 
+        ((-0.5*np.cos(self.theta_L) + (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. + 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))*
+        (-0.5*(np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L)*np.sin(self.phi_S_Ec) + np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_S_Ec)*np.cos(self.theta_L)*np.cos(self.phi_S_Ec)) - np.cos(self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.))/
+        ((np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))**2 + 
+        (-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.)**2))*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))) - 
+        2*np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        ((-2*np.sin(self.theta_S_Ec)*(np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - t*omega_E) - np.sqrt(3)*np.sin(self.theta_S_Ec))*np.sin(self.phi_S_Ec - t*omega_E))/
+        ((np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))**2 + 4*np.sin(self.theta_S_Ec)**2*np.sin(self.phi_S_Ec - t*omega_E)**2) - 
+        (2*np.cos(self.theta_S_Ec)*(-(np.sqrt(3)*np.cos(self.theta_S_Ec)) - np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))*np.sin(self.phi_S_Ec - t*omega_E))/
+        ((np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))**2 + 4*np.sin(self.theta_S_Ec)**2*np.sin(self.phi_S_Ec - t*omega_E)**2))*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))) - 
+        2*np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        (((-((np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(-(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_L))) - 
+        (-0.5*(np.sqrt(3)*np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - t*omega_E)) - np.sin(self.theta_S_Ec)/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))*
+        (-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.))/
+        ((np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))**2 + 
+        (-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.)**2) + 
+        ((-0.5*np.cos(self.theta_L) + (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. + 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))*
+        (-0.5*(np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L)*np.sin(self.phi_S_Ec) + np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_S_Ec)*np.cos(self.theta_L)*np.cos(self.phi_S_Ec)) - np.cos(self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.))/
+        ((np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))**2 + 
+        (-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.)**2))*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec)))) - 
+        np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        (1 + (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)**2)*
+        ((-2*np.sin(self.theta_S_Ec)*(np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - t*omega_E) - np.sqrt(3)*np.sin(self.theta_S_Ec))*np.sin(self.phi_S_Ec - t*omega_E))/
+        ((np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))**2 + 4*np.sin(self.theta_S_Ec)**2*np.sin(self.phi_S_Ec - t*omega_E)**2) - 
+        (2*np.cos(self.theta_S_Ec)*(-(np.sqrt(3)*np.cos(self.theta_S_Ec)) - np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))*np.sin(self.phi_S_Ec - t*omega_E))/
+        ((np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))**2 + 4*np.sin(self.theta_S_Ec)**2*np.sin(self.phi_S_Ec - t*omega_E)**2))*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec)))) - 
+        (-0.5*(np.sqrt(3)*np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - t*omega_E)) - np.sin(self.theta_S_Ec)/2.)*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec)))))*
+        ((np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (1 + (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)**2))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))))/2. + 
+        self.a0**2*(-(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_L))*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))*
+        (1 + (np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))**2)*
+        ((np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (1 + (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)**2))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec)))))**2 + 
+        2*self.a0**2*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))**2*
+        ((np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (1 + (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)**2)*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))))/2. + 
+        np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec)))))*
+        (np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (1 + (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)**2)*
+        (((-((np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(-(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_L))) - 
+        (-0.5*(np.sqrt(3)*np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - t*omega_E)) - np.sin(self.theta_S_Ec)/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))*
+        (-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.))/
+        ((np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))**2 + 
+        (-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.)**2) + 
+        ((-0.5*np.cos(self.theta_L) + (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. + 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))*
+        (-0.5*(np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L)*np.sin(self.phi_S_Ec) + np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_S_Ec)*np.cos(self.theta_L)*np.cos(self.phi_S_Ec)) - np.cos(self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.))/
+        ((np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))**2 + 
+        (-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.)**2)) + 
+        2*np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        ((-2*np.sin(self.theta_S_Ec)*(np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - t*omega_E) - np.sqrt(3)*np.sin(self.theta_S_Ec))*np.sin(self.phi_S_Ec - t*omega_E))/
+        ((np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))**2 + 4*np.sin(self.theta_S_Ec)**2*np.sin(self.phi_S_Ec - t*omega_E)**2) - 
+        (2*np.cos(self.theta_S_Ec)*(-(np.sqrt(3)*np.cos(self.theta_S_Ec)) - np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))*np.sin(self.phi_S_Ec - t*omega_E))/
+        ((np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))**2 + 4*np.sin(self.theta_S_Ec)**2*np.sin(self.phi_S_Ec - t*omega_E)**2)) + 
+        np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (-0.5*(np.sqrt(3)*np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - t*omega_E)) - np.sin(self.theta_S_Ec)/2.)*(np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))) + 
+        np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        (-0.5*(np.sqrt(3)*np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - t*omega_E)) - np.sin(self.theta_S_Ec)/2.)*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec)))) - 
+        2*(np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        (((-((np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(-(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_L))) - 
+        (-0.5*(np.sqrt(3)*np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - t*omega_E)) - np.sin(self.theta_S_Ec)/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))*
+        (-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.))/
+        ((np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))**2 + 
+        (-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.)**2) + 
+        ((-0.5*np.cos(self.theta_L) + (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. + 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))*
+        (-0.5*(np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L)*np.sin(self.phi_S_Ec) + np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_S_Ec)*np.cos(self.theta_L)*np.cos(self.phi_S_Ec)) - np.cos(self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.))/
+        ((np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))**2 + 
+        (-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.)**2))*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec)))) - 
+        (1 + (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)**2)*
+        ((-2*np.sin(self.theta_S_Ec)*(np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - t*omega_E) - np.sqrt(3)*np.sin(self.theta_S_Ec))*np.sin(self.phi_S_Ec - t*omega_E))/
+        ((np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))**2 + 4*np.sin(self.theta_S_Ec)**2*np.sin(self.phi_S_Ec - t*omega_E)**2) - 
+        (2*np.cos(self.theta_S_Ec)*(-(np.sqrt(3)*np.cos(self.theta_S_Ec)) - np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))*np.sin(self.phi_S_Ec - t*omega_E))/
+        ((np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))**2 + 4*np.sin(self.theta_S_Ec)**2*np.sin(self.phi_S_Ec - t*omega_E)**2))*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec)))))))/
+        (4.*np.sqrt(self.a0**2*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))**2*
+        ((np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (1 + (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)**2)*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))))/2. + 
+        np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec)))))**2 + 
+        (self.a0**2*(1 + (np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))**2)**2*
+        ((np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (1 + (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)**2))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec)))))**2)/4.)) - 
+        (np.sqrt(3)*np.sqrt(self.a0**2*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))**2*
+        ((np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (1 + (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)**2)*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))))/2. + 
+        np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec)))))**2 + 
+        (self.a0**2*(1 + (np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))**2)**2*
+        ((np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (1 + (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)**2))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec)))))**2)/4.)*
+        ((2*AU*self.freq(t)*pi*np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - t*omega_E))/c - (self.a0*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))*
+        ((np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (1 + (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)**2)*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))))/2. + 
+        np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec)))))*
+        ((self.a0*(1 + (np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))**2)*
+        (np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (-0.5*(np.sqrt(3)*np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - t*omega_E)) - np.sin(self.theta_S_Ec)/2.)*(np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.) - 
+        np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (1 + (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)**2)*
+        (((-((np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(-(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_L))) - 
+        (-0.5*(np.sqrt(3)*np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - t*omega_E)) - np.sin(self.theta_S_Ec)/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))*
+        (-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.))/
+        ((np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))**2 + 
+        (-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.)**2) + 
+        ((-0.5*np.cos(self.theta_L) + (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. + 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))*
+        (-0.5*(np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L)*np.sin(self.phi_S_Ec) + np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_S_Ec)*np.cos(self.theta_L)*np.cos(self.phi_S_Ec)) - np.cos(self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.))/
+        ((np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))**2 + 
+        (-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.)**2))*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))) - 
+        2*np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        ((-2*np.sin(self.theta_S_Ec)*(np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - t*omega_E) - np.sqrt(3)*np.sin(self.theta_S_Ec))*np.sin(self.phi_S_Ec - t*omega_E))/
+        ((np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))**2 + 4*np.sin(self.theta_S_Ec)**2*np.sin(self.phi_S_Ec - t*omega_E)**2) - 
+        (2*np.cos(self.theta_S_Ec)*(-(np.sqrt(3)*np.cos(self.theta_S_Ec)) - np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))*np.sin(self.phi_S_Ec - t*omega_E))/
+        ((np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))**2 + 4*np.sin(self.theta_S_Ec)**2*np.sin(self.phi_S_Ec - t*omega_E)**2))*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))) - 
+        2*np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        (((-((np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(-(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_L))) - 
+        (-0.5*(np.sqrt(3)*np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - t*omega_E)) - np.sin(self.theta_S_Ec)/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))*
+        (-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.))/
+        ((np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))**2 + 
+        (-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.)**2) + 
+        ((-0.5*np.cos(self.theta_L) + (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. + 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))*
+        (-0.5*(np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L)*np.sin(self.phi_S_Ec) + np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_S_Ec)*np.cos(self.theta_L)*np.cos(self.phi_S_Ec)) - np.cos(self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.))/
+        ((np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))**2 + 
+        (-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.)**2))*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec)))) - 
+        np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        (1 + (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)**2)*
+        ((-2*np.sin(self.theta_S_Ec)*(np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - t*omega_E) - np.sqrt(3)*np.sin(self.theta_S_Ec))*np.sin(self.phi_S_Ec - t*omega_E))/
+        ((np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))**2 + 4*np.sin(self.theta_S_Ec)**2*np.sin(self.phi_S_Ec - t*omega_E)**2) - 
+        (2*np.cos(self.theta_S_Ec)*(-(np.sqrt(3)*np.cos(self.theta_S_Ec)) - np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))*np.sin(self.phi_S_Ec - t*omega_E))/
+        ((np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))**2 + 4*np.sin(self.theta_S_Ec)**2*np.sin(self.phi_S_Ec - t*omega_E)**2))*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec)))) - 
+        (-0.5*(np.sqrt(3)*np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - t*omega_E)) - np.sin(self.theta_S_Ec)/2.)*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))))/2. + 
+        self.a0*(-(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_L))*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))*
+        ((np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (1 + (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)**2))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec)))))))/
+        (self.a0**2*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))**2*
+        ((np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (1 + (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)**2)*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))))/2. + 
+        np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec)))))**2 + 
+        (self.a0**2*(1 + (np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))**2)**2*
+        ((np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (1 + (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)**2))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec)))))**2)/4.) + 
+        (self.a0*(1 + (np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))**2)*
+        ((np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (1 + (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)**2))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec)))))*
+        (self.a0*(-(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_L))*
+        ((np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (1 + (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)**2)*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))))/2. + 
+        np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))) + 
+        self.a0*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))*
+        (np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (1 + (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)**2)*
+        (((-((np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(-(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_L))) - 
+        (-0.5*(np.sqrt(3)*np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - t*omega_E)) - np.sin(self.theta_S_Ec)/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))*
+        (-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.))/
+        ((np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))**2 + 
+        (-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.)**2) + 
+        ((-0.5*np.cos(self.theta_L) + (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. + 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))*
+        (-0.5*(np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L)*np.sin(self.phi_S_Ec) + np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_S_Ec)*np.cos(self.theta_L)*np.cos(self.phi_S_Ec)) - np.cos(self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.))/
+        ((np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))**2 + 
+        (-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.)**2)) + 
+        2*np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        ((-2*np.sin(self.theta_S_Ec)*(np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - t*omega_E) - np.sqrt(3)*np.sin(self.theta_S_Ec))*np.sin(self.phi_S_Ec - t*omega_E))/
+        ((np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))**2 + 4*np.sin(self.theta_S_Ec)**2*np.sin(self.phi_S_Ec - t*omega_E)**2) - 
+        (2*np.cos(self.theta_S_Ec)*(-(np.sqrt(3)*np.cos(self.theta_S_Ec)) - np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))*np.sin(self.phi_S_Ec - t*omega_E))/
+        ((np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))**2 + 4*np.sin(self.theta_S_Ec)**2*np.sin(self.phi_S_Ec - t*omega_E)**2)) + 
+        np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (-0.5*(np.sqrt(3)*np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - t*omega_E)) - np.sin(self.theta_S_Ec)/2.)*(np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))) + 
+        np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        (-0.5*(np.sqrt(3)*np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - t*omega_E)) - np.sin(self.theta_S_Ec)/2.)*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec)))) - 
+        2*(np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        (((-((np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(-(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_L))) - 
+        (-0.5*(np.sqrt(3)*np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - t*omega_E)) - np.sin(self.theta_S_Ec)/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))*
+        (-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.))/
+        ((np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))**2 + 
+        (-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.)**2) + 
+        ((-0.5*np.cos(self.theta_L) + (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. + 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))*
+        (-0.5*(np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L)*np.sin(self.phi_S_Ec) + np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_S_Ec)*np.cos(self.theta_L)*np.cos(self.phi_S_Ec)) - np.cos(self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.))/
+        ((np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))**2 + 
+        (-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.)**2))*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec)))) - 
+        (1 + (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)**2)*
+        ((-2*np.sin(self.theta_S_Ec)*(np.cos(self.theta_S_Ec)*np.cos(self.phi_S_Ec - t*omega_E) - np.sqrt(3)*np.sin(self.theta_S_Ec))*np.sin(self.phi_S_Ec - t*omega_E))/
+        ((np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))**2 + 4*np.sin(self.theta_S_Ec)**2*np.sin(self.phi_S_Ec - t*omega_E)**2) - 
+        (2*np.cos(self.theta_S_Ec)*(-(np.sqrt(3)*np.cos(self.theta_S_Ec)) - np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))*np.sin(self.phi_S_Ec - t*omega_E))/
+        ((np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))**2 + 4*np.sin(self.theta_S_Ec)**2*np.sin(self.phi_S_Ec - t*omega_E)**2))*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec)))))))/
+        (2.*(self.a0**2*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))**2*
+        ((np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (1 + (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)**2)*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))))/2. + 
+        np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec)))))**2 + 
+        (self.a0**2*(1 + (np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))**2)**2*
+        ((np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (1 + (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)**2))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec)))))**2)/4.)))*
+        np.sin(2*pi*self.freq_int(t) + ArcTan((self.a0*(1 + (np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))**2)*
+        ((np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (1 + (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)**2))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))))/2.,
+        self.a0*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))*
+        ((np.cos(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))))*
+        (1 + (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)**2)*
+        np.sin(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L)))))/2. + 
+        np.cos(2*ArcTan(-0.5*(np.sin(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_S_Ec - self.phi_L)) - 
+        (np.sqrt(3)*np.cos(t*omega_E)*(np.cos(self.theta_L)*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec) - np.cos(self.theta_S_Ec)*np.sin(self.theta_L)*np.sin(self.phi_L)))/2. - 
+        (np.sqrt(3)*(-(np.cos(self.theta_L)*np.cos(self.phi_S_Ec)*np.sin(self.theta_S_Ec)) + np.cos(self.theta_S_Ec)*np.cos(self.phi_L)*np.sin(self.theta_L))*np.sin(t*omega_E))/2.,
+        np.cos(self.theta_L)/2. - (np.sqrt(3)*np.cos(self.phi_L - t*omega_E)*np.sin(self.theta_L))/2. - 
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*(np.cos(self.theta_S_Ec)*np.cos(self.theta_L) + np.cos(self.phi_S_Ec - self.phi_L)*np.sin(self.theta_S_Ec)*np.sin(self.theta_L))))*
+        (np.cos(self.theta_S_Ec)/2. - (np.sqrt(3)*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/2.)*
+        np.sin(2*(t*omega_E + ArcTan(-2*np.sin(self.theta_S_Ec)*np.sin(self.phi_S_Ec - t*omega_E),np.sqrt(3)*np.cos(self.theta_S_Ec) + np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec)))))) + 
+        (2*AU*self.freq(t)*pi*np.cos(self.phi_S_Ec - t*omega_E)*np.sin(self.theta_S_Ec))/c))/2.
